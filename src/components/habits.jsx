@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Habit from './habit';
+// import App from '../app';
 
 class Habits extends Component {
   state ={
@@ -10,7 +11,6 @@ class Habits extends Component {
     ],
   };
 
-  
   handleIncrement = (habit) => {
     const habits = [...this.state.habits];
     const index = habits.indexOf(habit);
