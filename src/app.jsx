@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './app.css';
 import Habits from './components/habits';
 import Navbar from './components/navbar';
-import CreateForm from './components/createForm';
+
 
 class App extends Component{
   state ={
@@ -41,20 +41,28 @@ class App extends Component{
     this.setState({habits});
   };
 
+  handleAdd = name => {
+    const habit =  {id:Date.now(),name:name, count:0};
+    const habits = [...this.state.habits, habit];
+    this.setState({habits});
+
+  };
+
 
   render(){
     return (
-      <div>
+      <>
         <Navbar
         habits_cnt={this.state.habits.length}
         ></Navbar>
         <Habits
         habits={this.state.habits}
-        handleDecrement={this.handleDecrement}
-        handleDelete={this.handleDelete}
-        handleIncrement={this.handleIncrement}></Habits>
-        <CreateForm></CreateForm>
-      </div>
+        onDecrement={this.handleDecrement}
+        onDelete={this.handleDelete}
+        onIncrement={this.handleIncrement}
+        onAdd = {this.handleAdd}
+        ></Habits>
+      </>
       );
 
   }
