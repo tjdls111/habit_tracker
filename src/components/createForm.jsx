@@ -13,6 +13,7 @@ class CreateForm extends Component{
     // console.log('submit!!');
     const name = this.inputRef.current.value
     name && this.props.onAdd(name); // 이름 받아왔으면, onAdd에 넘김
+    this.inputRef.current.value = '';
 
   }
 
