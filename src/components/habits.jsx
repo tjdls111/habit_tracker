@@ -25,6 +25,7 @@ class Habits extends Component {
 
 
   render() {
+    console.log('habits');
     return (
       <>
         <CreateForm onAdd={this.handleAdd}>

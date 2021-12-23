@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 
-class Habit extends Component {
+class Habit extends PureComponent {
 
 
   handleIncrement = () => {
@@ -21,6 +21,7 @@ class Habit extends Component {
   }
 
   render() {
+    console.log('habit: '+this.props.habit.name);
     // console.log(this.props);
     const {name, count} = this.props.habit;
     return (

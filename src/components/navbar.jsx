@@ -4,6 +4,7 @@ import '../app.css';
 class NavBar extends Component{
 
   render(){
+    console.log('navbar');
     return (
       <div className='navbar'>
         <h1>Habit Tracker ✅📚👩‍💻</h1>
