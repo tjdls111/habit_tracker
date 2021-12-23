@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './app.css';
 import Habits from './components/habits';
 import Navbar from './components/navbar';
+import ResetBtn from './components/resetBtn';
 
 
 class App extends Component{
@@ -48,6 +49,11 @@ class App extends Component{
 
   };
 
+  handleReset = ()=>{
+    const habits = [...this.state.habits];
+    habits.map(habit => habit.count= 0)
+    this.setState({habits});
+  }
 
   render(){
     return (
@@ -62,6 +68,10 @@ class App extends Component{
         onIncrement={this.handleIncrement}
         onAdd = {this.handleAdd}
         ></Habits>
+
+        <ResetBtn
+          onReset = {this.handleReset}
+        ></ResetBtn>
       </>
       );
 

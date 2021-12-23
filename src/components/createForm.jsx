@@ -21,13 +21,15 @@ class CreateForm extends Component{
     return (
         <form 
           action={this.addTodo} 
-          onSubmit={this.onSubmit}>
+          onSubmit={this.onSubmit}
+          
+          >
           <input 
             ref = {this.inputRef} 
             type="text" 
             className="add-input" 
             placeholder='만들고 싶은 습관을 입력하세요!'/>
-          <button>추가하기</button>
+          <button className='input-btn'>추가하기</button>
         </form>
     )
 
