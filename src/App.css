@@ -18,31 +18,33 @@ button{
   height: 3rem;
   line-height: 2.5rem;
   margin: 0 0.2em 0.5em;
-  background-color: lightgoldenrodyellow;
+  background-color: #FFAFAF;
+  color: #FBFFE2;
   border-radius: 50%;
   
 }
 
 .navbar{
   text-align: center;
-  background-color:honeydew;
+  background-color:#FFAFAF;
+  color: #FBFFE2;
   margin-top: 0;
   padding: 0.5em 0;
   
 }
 
 .add-input{
-  border : 2px solid skyblue;
+  border : 2px solid #FFAFAF;
   border-radius : 5px;
   margin: 2rem 1rem 0 50%;
-  background : aliceblue;
+  background : #FFEBCC;
   height: 30px;
 
 }
 
 .input-btn, .reset-btn{
-  background:#1AAB8A;
-  color:#fff;
+  background:#FFEBCC;
+  color:black;
   border:none;
   position:relative;
   height:30px;
@@ -72,11 +74,11 @@ button{
 
 .habit-increase,
 .habit-decrease{
-  color:lightgreen;
+  color:#FF9999;
 }
 
 .habit-delete{
-  color:indianred;
+  color: #FFEBCC;
 }
 
 
