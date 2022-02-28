@@ -1,83 +1,75 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import "./App.css";
 import Habits from "./components/habits";
 import Navbar from "./components/navbar";
 import ResetBtn from "./components/resetBtn";
 
-class App extends Component {
-  state = {
-    habits: [
-      { id: 1, name: "Reading", count: 0 },
-      { id: 2, name: "Coding", count: 0 },
-      { id: 3, name: "Running", count: 0 },
-    ],
-    // cnt : this.state.habits.length,
-  };
+const App = () => {
+  const [habits, setHabits] = useState([
+    { id: 1, name: "Reading", count: 0 },
+    { id: 2, name: "Coding", count: 0 },
+    { id: 3, name: "Running", count: 0 },
+  ]);
 
-  handleIncrement = (habit) => {
-    const habits = this.state.habits.map((item) => {
+  const handleIncrement = (habit) => {
+    const habits2 = habits.map((item) => {
       if (item.id === habit.id) {
         return { ...habit, count: habit.count + 1 };
       }
       return item;
     });
-    this.setState({ habits });
+    setHabits(habits2);
   };
 
-  handleDecrement = (habit) => {
-    // console.log({habit});
-    // this.habits[habit.id] -= 1;
-    const habits = this.state.habits.map((item) => {
+  const handleDecrement = (habit) => {
+    const habits2 = habits.map((item) => {
       if (item.id === habit.id) {
         return { ...item, count: item.count <= 0 ? 0 : item.count - 1 };
       }
       return item;
     });
-    this.setState({ habits });
+    setHabits(habits2);
   };
 
-  handleDelete = (habit) => {
+  const handleDelete = (habit) => {
     // console.log({habit});
-    const habits = [...this.state.habits];
+    const habits2 = [...habits];
     const index = habits.indexOf(habit);
-    habits.splice(index, 1);
-    this.setState({ habits });
+    habits2.splice(index, 1);
+    setHabits(habits2);
   };
 
-  handleAdd = (name) => {
+  const handleAdd = (name) => {
     const habit = { id: Date.now(), name: name, count: 0 };
-    const habits = [...this.state.habits, habit];
-    this.setState({ habits });
+    const habits2 = [...habits, habit];
+    setHabits(habits2);
   };
 
-  handleReset = () => {
-    const habits = this.state.habits.map((item) => {
+  const handleReset = () => {
+    const habits2 = habits.map((item) => {
       if (item.count !== 0) {
         return { ...item, count: 0 };
       }
       return item;
     });
 
-    this.setState({ habits });
+    setHabits(habits2);
   };
 
-  render() {
-    console.log("app");
-    return (
-      <>
-        <Navbar habits_cnt={this.state.habits.length}></Navbar>
-        <Habits
-          habits={this.state.habits}
-          onDecrement={this.handleDecrement}
-          onDelete={this.handleDelete}
-          onIncrement={this.handleIncrement}
-          onAdd={this.handleAdd}
-        ></Habits>
+  return (
+    <>
+      <Navbar habits_cnt={habits.length}></Navbar>
+      <Habits
+        habits={habits}
+        onDecrement={handleDecrement}
+        onDelete={handleDelete}
+        onIncrement={handleIncrement}
+        onAdd={handleAdd}
+      ></Habits>
 
-        <ResetBtn onReset={this.handleReset}></ResetBtn>
-      </>
-    );
-  }
-}
+      <ResetBtn onReset={handleReset}></ResetBtn>
+    </>
+  );
+};
 
 export default App;
