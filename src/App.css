@@ -1,16 +1,16 @@
-button{
+button {
   outline: none;
-  border:0;
-  cursor:pointer;
+  border: 0;
+  cursor: pointer;
 }
 
-.habit{
+.habit {
   font-size: 2.5rem;
   padding: 0.5em;
   list-style: none;
 }
 
-.habit-count{
+.habit-count {
   display: inline-block;
   text-align: center;
   font-size: 2rem;
@@ -18,68 +18,61 @@ button{
   height: 3rem;
   line-height: 2.5rem;
   margin: 0 0.2em 0.5em;
-  background-color: #FFAFAF;
-  color: #FBFFE2;
+  background-color: #ffafaf;
+  color: #fbffe2;
   border-radius: 50%;
-  
 }
 
-.navbar{
+.navbar {
   text-align: center;
-  background-color:#FFAFAF;
-  color: #FBFFE2;
+  background-color: #ffafaf;
+  color: #fbffe2;
   margin-top: 0;
   padding: 0.5em 0;
-  
 }
 
-.add-input{
-  border : 2px solid #FFAFAF;
-  border-radius : 5px;
+.add-input {
+  border: 2px solid #ffafaf;
+  border-radius: 5px;
   margin: 2rem 1rem 0 50%;
-  background : #FFEBCC;
+  background: #ffebcc;
   height: 30px;
-
 }
 
-.input-btn, .reset-btn{
-  background:#FFEBCC;
-  color:black;
-  border:none;
+.input-btn,
+.reset-btn {
+  background: #ffebcc;
+  color: black;
+  border: none;
   border-radius: 10%;
-  position:relative;
-  height:30px;
-  font-size:1em;
-  padding:0 2em;
-  cursor:pointer;
-  transition:800ms ease all;
-  outline:none;
-
-
+  position: relative;
+  height: 30px;
+  font-size: 1em;
+  padding: 0 2em;
+  cursor: pointer;
+  transition: 800ms ease all;
+  outline: none;
 }
 
-.reset-btn{
+.reset-btn {
   margin: 2rem 1rem 0 50%;
-
 }
 
-.habit-button{
-  font-size:2.5rem;
+.habit-button {
+  font-size: 2.5rem;
   margin: 0 0.1em;
   background-color: transparent;
 }
 
-.habit-button:hover{
+.habit-button:hover {
   opacity: 0.5;
 }
 
 .habit-increase,
-.habit-decrease{
-  color:#FF9999;
+.habit-decrease {
+  color: #ff9999;
 }
 
-.habit-delete{
-  color: #FFEBCC;
+.habit-delete {
+  color: #ffebcc;
 }
-
-
