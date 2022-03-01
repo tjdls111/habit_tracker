@@ -1,6 +1,7 @@
 export default class HabitPresenter {
-  constructor(habits) {
+  constructor(habits, maxHabits) {
     this.habits = habits;
+    this.maxHabits = maxHabits;
   }
 
   getHabits() {
@@ -27,12 +28,15 @@ export default class HabitPresenter {
     update(this.habits);
   }
   delete(habit, update) {
-    const index = this.habits.indexOf(habit);
-    this.habits.splice(index, 1);
+    // this.habits.splice(habit.id, 1);
+    this.habits = this.habits.filter((item) => item.id !== habit.id);
     update(this.habits);
   }
 
   add(name, update) {
+    if (this.habits.length === this.maxHabits) {
+      throw new Error(`Habit 개수는 ${this.maxHabits}까지입니다~!!`);
+    }
     const habit = { id: Date.now(), name: name, count: 0 };
     this.habits = [...this.habits, habit];
     update(this.habits);
