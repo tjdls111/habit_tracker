@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/habit_tracker/static/css/main.6298f8e6.chunk.css",
-    "main.js": "/habit_tracker/static/js/main.e0a76d47.chunk.js",
-    "main.js.map": "/habit_tracker/static/js/main.e0a76d47.chunk.js.map",
-    "runtime-main.js": "/habit_tracker/static/js/runtime-main.f66c6511.js",
-    "runtime-main.js.map": "/habit_tracker/static/js/runtime-main.f66c6511.js.map",
-    "static/js/2.916e7ed0.chunk.js": "/habit_tracker/static/js/2.916e7ed0.chunk.js",
-    "static/js/2.916e7ed0.chunk.js.map": "/habit_tracker/static/js/2.916e7ed0.chunk.js.map",
-    "index.html": "/habit_tracker/index.html",
-    "static/css/main.6298f8e6.chunk.css.map": "/habit_tracker/static/css/main.6298f8e6.chunk.css.map",
-    "static/js/2.916e7ed0.chunk.js.LICENSE.txt": "/habit_tracker/static/js/2.916e7ed0.chunk.js.LICENSE.txt"
+    "main.css": "/react-habit-tracker/static/css/main.6298f8e6.chunk.css",
+    "main.js": "/react-habit-tracker/static/js/main.e0a76d47.chunk.js",
+    "main.js.map": "/react-habit-tracker/static/js/main.e0a76d47.chunk.js.map",
+    "runtime-main.js": "/react-habit-tracker/static/js/runtime-main.d003c065.js",
+    "runtime-main.js.map": "/react-habit-tracker/static/js/runtime-main.d003c065.js.map",
+    "static/js/2.916e7ed0.chunk.js": "/react-habit-tracker/static/js/2.916e7ed0.chunk.js",
+    "static/js/2.916e7ed0.chunk.js.map": "/react-habit-tracker/static/js/2.916e7ed0.chunk.js.map",
+    "index.html": "/react-habit-tracker/index.html",
+    "static/css/main.6298f8e6.chunk.css.map": "/react-habit-tracker/static/css/main.6298f8e6.chunk.css.map",
+    "static/js/2.916e7ed0.chunk.js.LICENSE.txt": "/react-habit-tracker/static/js/2.916e7ed0.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.f66c6511.js",
+    "static/js/runtime-main.d003c065.js",
     "static/js/2.916e7ed0.chunk.js",
     "static/css/main.6298f8e6.chunk.css",
     "static/js/main.e0a76d47.chunk.js"
